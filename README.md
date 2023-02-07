@@ -39,19 +39,19 @@
 
 ## 依赖三方库
 
- 依赖           | 版本号           | 说明  
---------------|---------------|-----
-spring-boot | 2.3.4.RELEASE |  
-fastjson | 1.2.73        |  
-jackson | 2.11.3 |  
-commons-lang3 | 3.11          |
-commons-collections4 | 4.4           |
-guava | 29.0-jre      |  
-slf4j | 1.7.30    |
-hibernate-validator | 6.1.6.Final |
-servlet-api | 3.1.0 | servlet相关依赖
-mybatis-spring-boot-starter | 2.1.3 |
-lombok | 1.18.16 | 
+| 依赖                          | 版本号           | 说明          |
+|-----------------------------|---------------|-------------|
+| spring-boot                 | 2.3.4.RELEASE |             |
+| fastjson                    | 1.2.73        |             |
+| jackson                     | 2.11.3        |             |
+| commons-lang3               | 3.11          |             |
+| commons-collections4        | 4.4           |             |
+| guava                       | 29.0-jre      |             |
+| slf4j                       | 1.7.30        |             |
+| hibernate-validator         | 6.1.6.Final   |             |
+| servlet-api                 | 3.1.0         | servlet相关依赖 |
+| mybatis-spring-boot-starter | 2.1.3         |             |
+| lombok                      | 1.18.16       |             |
 
 ## 使用前准备
 
