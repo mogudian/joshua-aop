@@ -5,8 +5,17 @@
 ## AOP说明
 
 ### caching
-#### Caching
+#### Caching 方法级的缓存，默认使用`guava-cache`本地缓存，可以实现`CacheProvider`接口并声明@Bean来替换
+
 ```java
+@Service
+public class ItemService {
+    // 缓存key为item:xxx 缓存时间5分钟 查询结果为空也要缓存防止穿透
+    @Caching(value = "'item:'.concat(#itemId)", expireMillis = 5 * 60 * 1000, cacheIfNull = true)
+    public ItemDTO queryItemById(String itemId) {
+
+    }
+}
 ```
 
 ### feign
