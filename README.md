@@ -19,8 +19,16 @@ public class ItemService {
 ```
 
 ### feign
-#### EnableRemoteErrorEcho
+#### EnableRemoteErrorEcho 为`Spring Cloud`提供远程异常本地显示功能，比如A调用B，A和B的启动类都有`@EnableRemoteErrorEcho`注解，那么当B异常时，A也会接收到B的异常并打印出来，方便调试。<br>注意，为了区分有些接口是直接给前端的，不需要此功能，可以让原来的统一返回对象类（code、data、message）实现ViewResponse接口即可
 ```java
+@EnableRemoteErrorEcho
+@SpringBootApplication
+public class DrivingServiceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(XxxServiceApplication.class, args);
+    }
+
+}
 ```
 
 ### limiting
