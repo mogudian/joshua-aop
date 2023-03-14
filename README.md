@@ -33,7 +33,22 @@ public class DrivingServiceApplication {
 
 ### limiting
 #### LimitRate
+
 ```java
+@Service
+public class ItemService {
+    // 限流key为queryItemById，QPS不能超过200，否则抛出RateLimitedException
+    @LimitRate(spel = "queryItemById", qps = 200)
+    public ItemDTO query(String itemId) {
+
+    }
+
+    // 限流key为queryItemById 与query方法共享限流，这两个方法总QPS不能超200
+    @LimitRate(spel = "queryItemById", qps = 200)
+    public ItemDTO queryList(List<String> itemIds) {
+
+    }
+}
 ```
 
 ### log
